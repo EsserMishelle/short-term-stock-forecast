@@ -2,15 +2,23 @@
 ## A Comparison of Baseline, Time-Series, and Machine Learning Models
 
 ### Overview and Analysis Objective
-The objective of this project is to forecast the short-term closing price of NVIDIA (NVDA) stock and evaluate the predictive performance of multiple modeling approaches across different forecast horizons. The study compares baseline models, classical time-series methods, and machine learning models to assess how forecast accuracy changes from short horizons (1–5 days) to longer horizons (up to 30 days).
+
+The objective of this project is to forecast the short-term closing price of NVIDIA (NVDA) stock and evaluate the predictive performance of multiple modeling approaches across different forecast horizons. The study compares baseline models, classical time-series methods, and machine learning models to assess how forecast accuracy changes from short horizons (1–5 days) to longer horizons (up to 30 days). 
+
+Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a consistent comparison across forecasting methods.
 
 ### Table of Contents 
 - [01_naive_baseline](#eda_and_naive_baseline)
-02_arima_model.ipynb
-03_prophet_model.ipynb
-04_price_based_models.ipynb
-05_return_based_models.ipynb
-06_model_comparison.ipynb
+
+- 02_arima_model.ipynb
+  
+- 03_prophet_model.ipynb
+  
+- 04_price_based_models.ipynb
+
+- 05_return_based_models.ipynb
+
+- 06_model_comparison.ipynb
 
 ### Data Description
 This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ)T and includes daily stock prices and trading volumes covering the period 2021–2026. The historical market data is obtained from Yahoo Finance / yfinance.
@@ -46,3 +54,14 @@ Baseline Model Comparison
 Comparing the two baseline approaches shows that the drift model leads to modest improvements, especially at longer forecast horizons. However, the gains remain relatively small, highlighting the inherent difficulty of predicting short-term stock price movements.
 
 ➡️ Full analysis: [`01_eda_and_naive_baseline.ipynb`](01_eda_and_naive_baseline.ipynb)
+
+## ARIMA Time-Series Model
+
+#### The ARIMA (AutoRegressive Integrated Moving Average) model is implemented as a classical time-series forecasting approach for predicting the short-term closing price of NVIDIA (NVDA). Model parameters are evaluated using information criteria and forecast accuracy metrics to determine an appropriate ARIMA specification.
+
+Stock prices are typically non-stationary, meaning their mean and variance change over time. To satisfy the stationarity requirement for the ARIMA models, the NVDA price series is transformed using first differencing. First differencing removes the long-term trend by modeling day-to-day price changes rather than price levels. The transformed series fluctuates around zero, indicating that the underlying trend has been removed, and that the series is suitable for ARIMA modeling.
+
+<img width="858" height="305" alt="image" src="https://github.com/user-attachments/assets/cce998f8-4b6a-4b0f-ae69-c6b431c333d1" />
+
+
+
