@@ -17,19 +17,32 @@ This project uses historical market data for NVIDIA (NVDA) along with selected m
 
 ## Exploratory Data Analysis(EDA) 
 
-<img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: auto;">
-
+<img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: 350px;">
 
 All stocks show an upward trend over the sample period, reflecting growth in the semiconductor and technology sectors. 
 
 NVDA exhibits the strongest growth trajectory in the later years of the dataset, coinciding with increased demand for AI-related computing hardware. While AMD and TSM also demonstrate significant growth, NVDA’s acceleration highlights its dominant role within the sector.
 
-<img src="assets/multiple_stocks_trading_volume.jpg" alt="Trading Volume" style="width: 2000px; height: auto;">
+<img src="assets/multiple_stocks_trading_volume.jpg" alt="Trading Volume" style="width: 2000px; height:  350px;">
 
 The volume chart shows NVDA consistently displays higher trading volume and more frequent spikes than its peers, indicating strong investor interest and active market participation. 
 
 Periods of increased trading activity often coincide with major price movements, suggesting that changes in trading volume reflect shifts in market sentiment and information flow.
 
-data/
-results/
-README.md
+## Baseline Forecast Models
+
+To establish a benchmark for model performance, two simple baseline forecasting approaches were implemented. These models serve as a reference point for evaluating whether forecasting methods improve predictive accuracy.
+
+Naive Baseline: assumes the future price equals the most recent observed price.
+
+<img src="assets/naive_baseline_results.jpg" alt="Naive Baseline Results" width='520'>
+
+Naive Drift: extends the naive model by incorporating the average daily price change observed in the training data.
+
+<img src="assets/naive_drift_results.jpg" alt="Naive Drift Results" width='650'>
+
+Baseline Model Comparison
+
+Comparing the two baseline approaches shows that the drift model leads to modest improvements, especially at longer forecast horizons. However, the gains remain relatively small, highlighting the inherent difficulty of predicting short-term stock price movements.
+
+➡️ Full analysis: [`01_eda_EDA.ipynb`](1_EDA.ipynb)
