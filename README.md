@@ -17,7 +17,10 @@ This project uses historical market data for NVIDIA (NVDA) along with selected m
 
 ## Exploratory Data Analysis(EDA) 
 
-<img src="assets/multiple_stocks_closing_price.jpg" alt="describe" width="1600">
+<!-- <img src="assets/multiple_stocks_closing_price.jpg" alt="describe" width="2000" height = "400"> -->
+<!-- <img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 100%; max-width: 2000px; height: auto;"> -->
+<!-- <img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: auto;"> -->
+<img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 100%; max-width: 2000px;">
 
 All stocks show an upward trend over the sample period, reflecting growth in the semiconductor and technology sectors. 
 
