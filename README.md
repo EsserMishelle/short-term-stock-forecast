@@ -17,16 +17,14 @@ This project uses historical market data for NVIDIA (NVDA) along with selected m
 
 ## Exploratory Data Analysis(EDA) 
 
-<!-- <img src="assets/multiple_stocks_closing_price.jpg" alt="describe" width="2000" height = "400"> -->
-<!-- <img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 100%; max-width: 2000px; height: auto;"> -->
-<!-- <img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: auto;"> -->
-<img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 100%; max-width: 2000px;">
+<img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: auto;">
+
 
 All stocks show an upward trend over the sample period, reflecting growth in the semiconductor and technology sectors. 
 
 NVDA exhibits the strongest growth trajectory in the later years of the dataset, coinciding with increased demand for AI-related computing hardware. While AMD and TSM also demonstrate significant growth, NVDA’s acceleration highlights its dominant role within the sector.
 
-<img src="assets/multiple_stocks_trading_volume.jpg" alt="describe" width="1600">
+<img src="assets/multiple_stocks_trading_volume.jpg" alt="Trading Volume" style="width: 2000px; height: auto;">
 
 The volume chart shows NVDA consistently displays higher trading volume and more frequent spikes than its peers, indicating strong investor interest and active market participation. 
 
