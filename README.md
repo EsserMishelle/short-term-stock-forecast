@@ -57,11 +57,11 @@ Comparing the two baseline approaches shows that the drift model leads to modest
 
 ## ARIMA Time-Series Model
 
-#### The ARIMA (AutoRegressive Integrated Moving Average) model is implemented as a classical time-series forecasting approach for predicting the short-term closing price of NVIDIA (NVDA). Model parameters are evaluated using information criteria and forecast accuracy metrics to determine an appropriate ARIMA specification.
+The ARIMA (AutoRegressive Integrated Moving Average) model is implemented as a classical time-series forecasting approach for predicting the short-term closing price of NVIDIA (NVDA). Model parameters are evaluated using information criteria and forecast accuracy metrics to determine an appropriate ARIMA specification.
 
 Stock prices are typically non-stationary, meaning their mean and variance change over time. To satisfy the stationarity requirement for the ARIMA models, the NVDA price series is transformed using first differencing. First differencing removes the long-term trend by modeling day-to-day price changes rather than price levels. The transformed series fluctuates around zero, indicating that the underlying trend has been removed, and that the series is suitable for ARIMA modeling.
+<img src="assets/arima_first_dif.jpg" alt="arima_first_difference" width='1000'>
 
-<img width="858" height="305" alt="image" src="https://github.com/user-attachments/assets/cce998f8-4b6a-4b0f-ae69-c6b431c333d1" />
 
 
 
