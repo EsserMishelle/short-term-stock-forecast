@@ -15,6 +15,11 @@ The objective of this project is to forecast the short-term closing price of NVI
 ### Data Description
 This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset includes daily stock prices and trading volumes covering the period 2021–2026. The data is obtained from Yahoo Finance / yfinance.
 
+## Exploratory Data Analysis(EDA) 
+
+<img src="assets/multiple_stocks_closing_price.jpg" alt="describe" width="1000">
+<img src="assets/multiple_stocks_trading_volume.jpg" alt="describe" width="1000">
+
 data/
 results/
 README.md
