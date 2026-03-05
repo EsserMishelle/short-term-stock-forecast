@@ -45,4 +45,4 @@ Baseline Model Comparison
 
 Comparing the two baseline approaches shows that the drift model leads to modest improvements, especially at longer forecast horizons. However, the gains remain relatively small, highlighting the inherent difficulty of predicting short-term stock price movements.
 
-➡️ Full analysis: [`01_eda_EDA.ipynb`](1_EDA.ipynb)
+➡️ Full analysis: [`01_eda_and_naive_baseline.ipynb`](01_eda_and_naive_baseline.ipynb)
