@@ -20,6 +20,8 @@ This project uses historical market data for NVIDIA (NVDA) along with selected m
 <img src="assets/multiple_stocks_closing_price.jpg" alt="describe" width="1000">
 <img src="assets/multiple_stocks_trading_volume.jpg" alt="describe" width="1000">
 
+NVDA shows the strongest price growth among the compared semiconductor assets over the sample period. While AMD and TSM also exhibit upward trends, NVDA’s acceleration in the later years reflects increased demand for AI-related computing hardware. The volume chart indicates consistently higher trading activity for NVDA relative to peer companies, suggesting strong investor interest.
+
 data/
 results/
 README.md
