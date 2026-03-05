@@ -13,14 +13,21 @@ The objective of this project is to forecast the short-term closing price of NVI
 06_model_comparison.ipynb
 
 ### Data Description
-This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset includes daily stock prices and trading volumes covering the period 2021–2026. The data is obtained from Yahoo Finance / yfinance.
+This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ)T and includes daily stock prices and trading volumes covering the period 2021–2026. The historical market data is obtained from Yahoo Finance / yfinance.
 
 ## Exploratory Data Analysis(EDA) 
 
-<img src="assets/multiple_stocks_closing_price.jpg" alt="describe" width="1000">
-<img src="assets/multiple_stocks_trading_volume.jpg" alt="describe" width="1000">
+<img src="assets/multiple_stocks_closing_price.jpg" alt="describe" width="1600">
 
-NVDA shows the strongest price growth among the compared semiconductor assets over the sample period. While AMD and TSM also exhibit upward trends, NVDA’s acceleration in the later years reflects increased demand for AI-related computing hardware. The volume chart indicates consistently higher trading activity for NVDA relative to peer companies, suggesting strong investor interest.
+All stocks show an upward trend over the sample period, reflecting growth in the semiconductor and technology sectors. 
+
+NVDA exhibits the strongest growth trajectory in the later years of the dataset, coinciding with increased demand for AI-related computing hardware. While AMD and TSM also demonstrate significant growth, NVDA’s acceleration highlights its dominant role within the sector.
+
+<img src="assets/multiple_stocks_trading_volume.jpg" alt="describe" width="1600">
+
+The volume chart shows NVDA consistently displays higher trading volume and more frequent spikes than its peers, indicating strong investor interest and active market participation. 
+
+Periods of increased trading activity often coincide with major price movements, suggesting that changes in trading volume reflect shifts in market sentiment and information flow.
 
 data/
 results/
