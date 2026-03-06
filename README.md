@@ -98,6 +98,14 @@ The ARIMA model captures the overall direction of the time series but struggles 
 
 ## Prophet Forecasting Model
 
-The Prophet forecasting model is also evaluated as an alternative time-series approach. Prophet is designed to capture trend, seasonality, and holiday effects in time-series data using an additive model framework. Unlike ARIMA, Prophet does not require explicit stationarity transformations and can automatically detect structural patterns in the data.
+The Prophet forecasting model is also evaluated as an alternative time-series approach. Prophet is designed to capture trend, seasonality, and holiday effects in time-series data using an additive model framework. Unlike ARIMA, Prophet does not require explicit stationarity transformations and is designed to handle irregular patterns in the data.
+
+* Training window: Jan 01, 2021 – Feb 3, 2025
+* Test window: Feb 3, 2025 – Feb 3, 2026
+* Forecast horizon: 30 business days
+* Frequency: business days (freq='B')
+* Seasonality: yearly enabled, weekly and daily disabled
+The model is trained only on the training window and evaluated on the test window to ensure realistic forecasting performance.
+
 
 
