@@ -69,13 +69,17 @@ ARIMA Time-Series Forecasting Model Performance
 
 The ARIMA model captures the general trend of the series but produces larger forecast errors compared to simpler baseline models.
 
-##### 30-Day Forecast Chart
+#### 30-Day Forecast Charts
 
-The fitted ARIMA model was used to generate a 30-day forecast of NVDA closing prices.
+NVDA Price History + Forecast Window
+
+The fitted ARIMA model was used to generate a 30-day forecast of NVDA closing prices. NVDA Price History + Forecast Window. The forecast window is highlighted in red in the final portion of the series.
+
+The forecast includes a 95% confidence interval that widens over time, reflecting increasing uncertainty as the forecast horizon grows.
 
 <img src="assets/arima_next30Day_nvda_forecast.jpg" alt="arima next30Day nvda forecast.jpg" width='1000'>
 
-The forecast includes a 95% confidence interval that widens over time, reflecting increasing uncertainty as the forecast horizon grows.
+Zoom on Last Months + Forecast
 
 <img src="assets/arima_next30Day_nvda_forecast_zoom.jpg" alt="arima next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
 
@@ -84,4 +88,4 @@ ARIMA Model Summary
 The ARIMA model captures the overall direction of the time series but struggles to represent short-term variability and volatility. While the model follows the long-term trend, forecast accuracy deteriorates as the prediction horizon increases. These results suggest that linear autoregressive structures alone may not fully capture the dynamics of NVDA price movements, motivating the exploration of machine learning models in the next section.
 
 
-➡️ Full analysis: [`01_eda_and_naive_baseline.ipynb`](01_eda_and_naive_baseline.ipynb)
+➡️ Full analysis: [`02_arima_price_model.ipynb`](02_arima_price_model.ipynb)
