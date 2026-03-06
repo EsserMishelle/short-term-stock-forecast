@@ -107,7 +107,17 @@ The Prophet forecasting model is also evaluated as an alternative time-series ap
 * Seasonality: yearly enabled, weekly and daily disabled
 The model is trained only on the training window and evaluated on the test window to ensure realistic forecasting performance.
 
-<img src="assets/prophet_next30Day_nvda_forecast.jpg" alt="prophet next30Day nvda forecast.jpg" width='1000'>
+Prophet Time-Series Forecasting Model Performance
+
+<img src="assets/prophet_results.jpg" alt="prophet_results.jpg" width='500' height='400'>
+
+The Prophet model captures the general trend of the series but produces larger forecast errors compared to simpler baseline models.
+
+#### Train, Test and Future 30 Days Forecast Charts
+
+The below charts show Prophet trains on historical NVDA prices, evaluates on a 90-day test window, and generates a 30-business-day forward forecast with 95% confidence intervals.
+
+<img src="assets/prophet_next30Day_nvda_forecast.jpg" alt="prophet next30Day nvda forecast.jpg" width='900' float='left'>
 
 <img src="assets/prophet_next30Day_nvda_forecast_zoom.jpg" alt="prophet next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
 
