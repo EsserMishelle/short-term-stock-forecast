@@ -8,15 +8,10 @@ Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a
 
 ### Table of Contents 
 - [01_naive_baseline](#eda_and_naive_baseline)
-
 - 02_arima_model.ipynb
-  
 - 03_prophet_model.ipynb
-  
 - 04_price_based_models.ipynb
-
 - 05_return_based_models.ipynb
-
 - 06_model_comparison.ipynb
 
 ### Data Description
@@ -37,7 +32,7 @@ The volume chart shows NVDA consistently displays higher trading volume and more
 Periods of increased trading activity often coincide with major price movements, suggesting that changes in trading volume reflect shifts in market sentiment and information flow.
 
 ### NDVA Price Return Patterns
-To investigate potential calendar effects, average daily returns are aggregated by month across the sample period.
+To investigate potential calendar effects, average daily returns are aggregated across the sample period.
 
 <img src="assets/avg_ndva_daily_return_patterns.jpg" alt="Avg NVDA Daily Return Patterns" style="width: 2000px; height:  350px;">
 
