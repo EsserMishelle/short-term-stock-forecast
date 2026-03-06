@@ -7,7 +7,7 @@ The objective of this project is to forecast the short-term closing price of NVI
 Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a consistent comparison across forecasting methods.
 
 ### Table of Contents 
-- [01_naive_baseline](#eda_and_naive_baseline)
+- [01_Baseline Forecast Models](#Baseline Forecast Models)
 - 02_arima_model.ipynb
 - 03_prophet_model.ipynb
 - 04_price_based_models.ipynb
@@ -15,7 +15,7 @@ Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a
 - 06_model_comparison.ipynb
 
 ### Data Description
-This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ) and includes daily stock prices and trading volumes covering the period from January 10, 2021, through February 04, 2026. The historical market data is obtained from Yahoo Finance / yfinance and is recorded at a business-day frequency, resulting in approximately five years of observations used for model training, testing, and forecasting.
+This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ) and includes daily stock prices and trading volumes covering the period from January 01, 2021, through February 05, 2026. The historical market data is obtained from Yahoo Finance / yfinance and is recorded at a business-day frequency, resulting in approximately five years of observations used for model training, testing, and forecasting.
 
 ## Exploratory Data Analysis(EDA) 
 
