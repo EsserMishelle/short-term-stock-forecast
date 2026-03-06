@@ -54,13 +54,15 @@ To establish a benchmark for model performance, two simple baseline forecasting 
 
 Naive Baseline: assumes the future price equals the most recent observed price.
 
+#### Baseline Models Performance
+
 <img src="assets/naive_baseline_results.jpg" alt="Naive Baseline Results" width='520'>
 
 Naive Drift: extends the naive model by incorporating the average daily price change observed in the training data.
 
 <img src="assets/naive_drift_results.jpg" alt="Naive Drift Results" width='650'>
 
-Baseline Model Comparison
+#### Baseline Models Summary
 
 Comparing the two baseline approaches shows that the drift model leads to modest improvements, especially at longer forecast horizons. However, the gains remain relatively small, highlighting the inherent difficulty of predicting short-term stock price movements.
 
