@@ -61,11 +61,11 @@ The ARIMA (AutoRegressive Integrated Moving Average) model is implemented as a c
 
 Stock prices are typically non-stationary, meaning their mean and variance change over time. To satisfy the stationarity requirement for the ARIMA models, the NVDA price series is transformed using first differencing. First differencing removes the long-term trend by modeling day-to-day price changes rather than price levels. The transformed series fluctuates around zero, indicating that the underlying trend has been removed, and that the series is suitable for ARIMA modeling.
 
-<img src="assets/arima_first_dif.jpg" alt="arima_first_difference" width='1000'>
+<img src="assets/arima_first_dif.jpg" alt="arima_first_difference" width='800'>
 
 ARIMA Time-Series Forecasting Model Performance
 
-<img src="assets/arima_results.jpg" alt="arima_results.jpg" width='500'>
+<img src="assets/arima_results.jpg" alt="arima_results.jpg" width='500' height='400'>
 
 The ARIMA model captures the general trend of the series but produces larger forecast errors compared to simpler baseline models.
 
