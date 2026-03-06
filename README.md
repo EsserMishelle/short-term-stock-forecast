@@ -93,7 +93,6 @@ ARIMA Model Summary
 
 The ARIMA model captures the overall direction of the time series but struggles to represent short-term variability and volatility. While the model follows the long-term trend, forecast accuracy deteriorates as the prediction horizon increases. These results suggest that linear autoregressive structures alone may not fully capture the dynamics of NVDA price movements, motivating the exploration of machine learning models in the next section.
 
-
 ➡️ Full analysis: [`02_arima_price_model.ipynb`](02_arima_price_model.ipynb)
 
 ## Prophet Forecasting Model
@@ -122,4 +121,8 @@ prophet_next30Day_nvda_forecast.jpg
 <img src="assets/prophet_next30Day_nvda_forecast_zoom.jpg" alt="prophet next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
 
 Prophet captures the long-term upward smooth trend in NVDA prices but struggles to fully capture short-term volatility during the test window. Forecast accuracy deteriorates during periods of rapid market movement, suggesting that additive seasonal models may have limited ability to model the complex dynamics of equity price movements.
+
+➡️ Full analysis: [`03_prophet_price_model.ipynb`](03_prophet_price_model.ipynb)
+
+
 
