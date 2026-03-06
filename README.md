@@ -1,23 +1,27 @@
-# Predicting NVDA Stock Prices: 
-## A Comparison of Baseline, Time-Series, and Machine Learning Models <img src="assets/header_image.jpg" alt="header_image" width='100'>
-### Overview and Analysis Objective
+<img src="assets/header_image.jpg" alt="header_image" width='100'>
+
+# Predicting NVDA Stock Prices: A Comparison of Baseline, Time-Series, and Machine Learning Models 
+## Overview and Analysis Objective
 
 The objective of this project is to forecast the short-term closing price of NVIDIA (NVDA) stock and evaluate the predictive performance of multiple modeling approaches across different forecast horizons. The study compares baseline models, classical time-series methods, and machine learning models to assess how forecast accuracy changes from short horizons (1–5 days) to longer horizons (up to 30 days). 
 
 Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a consistent comparison across forecasting methods.
 
-### Table of Contents 
-- [01_Baseline Forecast Models](#Baseline Forecast Models)
+## Table of Contents 
+- [Data Description](#data-description)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysiseda)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Baseline Forecast Models](#baseline-Forecast-Models)
 - 02_arima_model.ipynb
 - 03_prophet_model.ipynb
 - 04_price_based_models.ipynb
 - 05_return_based_models.ipynb
 - 06_model_comparison.ipynb
 
-### Data Description
+## Data Description
 This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ) and includes daily stock prices and trading volumes covering the period from January 01, 2021, through February 05, 2026. The historical market data is obtained from Yahoo Finance / yfinance and is recorded at a business-day frequency, resulting in approximately five years of observations used for model training, testing, and forecasting.
 
-## Exploratory Data Analysis(EDA) 
+# Exploratory Data Analysis (EDA) 
 
 <img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: 350px;">
 
@@ -38,7 +42,7 @@ To investigate potential calendar effects, average daily returns are aggregated 
 
 The results show limited consistent seasonal structure, suggesting that NVDA price movements are dominated by trend and volatility rather than deterministic seasonal cycles.
 
-## Baseline Forecast Models
+# Baseline Forecast Models
 
 To establish a benchmark for model performance, two simple baseline forecasting approaches were implemented. These models serve as a reference point for evaluating whether forecasting methods improve predictive accuracy.
 
