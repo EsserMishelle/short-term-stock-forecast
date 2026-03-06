@@ -1,6 +1,6 @@
 # Predicting NVDA Stock Prices: 
 ## A Comparison of Baseline, Time-Series, and Machine Learning Models
-
+<img src="assets/header_image.jpg" alt="header_image" width='50'>
 ### Overview and Analysis Objective
 
 The objective of this project is to forecast the short-term closing price of NVIDIA (NVDA) stock and evaluate the predictive performance of multiple modeling approaches across different forecast horizons. The study compares baseline models, classical time-series methods, and machine learning models to assess how forecast accuracy changes from short horizons (1–5 days) to longer horizons (up to 30 days). 
