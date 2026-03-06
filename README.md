@@ -9,19 +9,22 @@ Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a
 
 ## Table of Contents 
 - [Data Description](#data-description)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysiseda)
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Forecasting Models](#forecasting-models)
 - [Baseline Forecast Models](#baseline-Forecast-Models)
-- 02_arima_model.ipynb
-- 03_prophet_model.ipynb
-- 04_price_based_models.ipynb
-- 05_return_based_models.ipynb
-- 06_model_comparison.ipynb
+  - [Baseline Forecast Models](#baseline-forecast-models)
+  - [ARIMA Model](#arima-model)
+  - [Prophet Model](#prophet-model)
+  - [Price-Based Models](#price-based-models)
+  - [Return-Based Models](#return-based-models)
+- [Model Comparison](#model-comparison)
 
 ## Data Description
 This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ) and includes daily stock prices and trading volumes covering the period from January 01, 2021, through February 05, 2026. The historical market data is obtained from Yahoo Finance / yfinance and is recorded at a business-day frequency, resulting in approximately five years of observations used for model training, testing, and forecasting.
 
 ## Exploratory Data Analysis (EDA) 
+
+### Price and Volumne Charts
 
 <img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: 350px;">
 
@@ -36,6 +39,7 @@ The volume chart shows NVDA consistently displays higher trading volume and more
 Periods of increased trading activity often coincide with major price movements, suggesting that changes in trading volume reflect shifts in market sentiment and information flow.
 
 ### NDVA Price Return Patterns
+
 To investigate potential calendar effects, average daily returns are aggregated across the sample period.
 
 <img src="assets/avg_ndva_daily_return_patterns.jpg" alt="Avg NVDA Daily Return Patterns" style="width: 2000px; height:  350px;">
@@ -62,7 +66,7 @@ Comparing the two baseline approaches shows that the drift model leads to modest
 
 ➡️ Full analysis: [`01_eda_and_naive_baseline.ipynb`](01_eda_and_naive_baseline.ipynb)
 
-## ARIMA Time-Series Model
+### ARIMA Model
 
 The ARIMA (AutoRegressive Integrated Moving Average) model is implemented as a classical time-series forecasting approach for predicting the short-term closing price of NVIDIA (NVDA). Model parameters are evaluated using information criteria and forecast accuracy metrics to determine an appropriate ARIMA specification.
 
@@ -70,7 +74,7 @@ Stock prices are typically non-stationary, meaning their mean and variance chang
 
 <img src="assets/arima_first_dif.jpg" alt="arima_first_difference" width='800'>
 
-ARIMA Time-Series Forecasting Model Performance
+#### ARIMA Time-Series Forecasting Model Performance
 
 <img src="assets/arima_results.jpg" alt="arima_results.jpg" width='500' height='400'>
 
@@ -90,13 +94,13 @@ Zoom on Last Months + Forecast
 
 <img src="assets/arima_next30Day_nvda_forecast_zoom.jpg" alt="arima next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
 
-ARIMA Model Summary
+#### ARIMA Model Summary
 
 The ARIMA model captures the overall direction of the time series but struggles to represent short-term variability and volatility. While the model follows the long-term trend, forecast accuracy deteriorates as the prediction horizon increases. These results suggest that linear autoregressive structures alone may not fully capture the dynamics of NVDA price movements, motivating the exploration of machine learning models in the next section.
 
 ➡️ Full analysis: [`02_arima_price_model.ipynb`](02_arima_price_model.ipynb)
 
-## Prophet Forecasting Model
+### Prophet Model
 
 The Prophet forecasting model is also evaluated as an alternative time-series approach. Prophet is designed to capture trend, seasonality, and holiday effects in time-series data using an additive model framework. Unlike ARIMA, Prophet does not require explicit stationarity transformations and is designed to handle irregular patterns in the data.
 
@@ -107,7 +111,7 @@ The Prophet forecasting model is also evaluated as an alternative time-series ap
 * Seasonality: yearly enabled, weekly and daily disabled
 The model is trained only on the training window and evaluated on the test window to ensure realistic forecasting performance.
 
-Prophet Time-Series Forecasting Model Performance
+#### Prophet Time-Series Forecasting Model Performance
 
 <img src="assets/prophet_results.jpg" alt="prophet_results.jpg" width='500' height='400'>
 
@@ -120,6 +124,8 @@ The below charts show Prophet trains on historical NVDA prices, evaluates on a 9
 <img src="assets/prophet_next30Day_nvda_forecast.jpg" alt="prophet next30Day nvda forecast.jpg" width='800' float='left'>
 prophet_next30Day_nvda_forecast.jpg
 <img src="assets/prophet_next30Day_nvda_forecast_zoom.jpg" alt="prophet next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
+
+#### Prophet Model Summary
 
 Prophet captures the long-term upward smooth trend in NVDA prices but struggles to fully capture short-term volatility during the test window. Forecast accuracy deteriorates during periods of rapid market movement, suggesting that additive seasonal models may have limited ability to model the complex dynamics of equity price movements.
 
