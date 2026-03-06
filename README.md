@@ -1,6 +1,5 @@
 # Predicting NVDA Stock Prices: 
-## A Comparison of Baseline, Time-Series, and Machine Learning Models
-<img src="assets/header_image.jpg" alt="header_image" width='50'>
+## A Comparison of Baseline, Time-Series, and Machine Learning Models <img src="assets/header_image.jpg" alt="header_image" width='100'>
 ### Overview and Analysis Objective
 
 The objective of this project is to forecast the short-term closing price of NVIDIA (NVDA) stock and evaluate the predictive performance of multiple modeling approaches across different forecast horizons. The study compares baseline models, classical time-series methods, and machine learning models to assess how forecast accuracy changes from short horizons (1–5 days) to longer horizons (up to 30 days). 
@@ -36,6 +35,13 @@ NVDA exhibits the strongest growth trajectory in the later years of the dataset,
 The volume chart shows NVDA consistently displays higher trading volume and more frequent spikes than its peers, indicating strong investor interest and active market participation. 
 
 Periods of increased trading activity often coincide with major price movements, suggesting that changes in trading volume reflect shifts in market sentiment and information flow.
+
+### NDVA Price Return Patterns
+To investigate potential calendar effects, average daily returns are aggregated by month across the sample period.
+
+<img src="assets/avg_ndva_daily_return_patterns.jpg" alt="Avg NVDA Daily Return Patterns" style="width: 2000px; height:  350px;">
+
+The results show limited consistent seasonal structure, suggesting that NVDA price movements are dominated by trend and volatility rather than deterministic seasonal cycles.
 
 ## Baseline Forecast Models
 
@@ -89,3 +95,9 @@ The ARIMA model captures the overall direction of the time series but struggles 
 
 
 ➡️ Full analysis: [`02_arima_price_model.ipynb`](02_arima_price_model.ipynb)
+
+## Prophet Forecasting Model
+
+The Prophet forecasting model is also evaluated as an alternative time-series approach. Prophet is designed to capture trend, seasonality, and holiday effects in time-series data using an additive model framework. Unlike ARIMA, Prophet does not require explicit stationarity transformations and can automatically detect structural patterns in the data.
+
+
