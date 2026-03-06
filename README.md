@@ -137,8 +137,13 @@ Prophet captures the long-term upward smooth trend in NVDA prices but struggles 
 
 The objective of the price-based models is to evaluate whether machine learning methods using lagged price features and cross-asset signals can improve short-term forecasts of NVDA stock prices compared to traditional time-series models.
 
+##### Pearson Correlation Chart
+
 <img src="assets/heatmap.jpg" alt="Heatmap.jpg" width='1000' float='left'>
 
+The correlation matrix shows strong positive relationships between NVDA and other semiconductor-sector assets. NVDA prices are highly correlated with QQQ and TSM (0.94–0.97) and moderately correlated with AMD (0.77), reflecting shared market technology sector. Volatility indicators such as VIX exhibit a weak negative relationship with NVDA, consistent with the typical inverse relationship between market volatility and equity prices.
+
+These relationships motivate the inclusion of cross-asset features (AMD, TSM, and QQQ) in the machine learning models.
 
 ### Models Evaluated
 Three price-based models are evaluated with increasing feature complexity.
@@ -146,7 +151,9 @@ Three price-based models are evaluated with increasing feature complexity.
 ### NVDA-Only Linear Regression
 This model uses only lagged NVDA price features to forecast future prices in order to test whether a simple autoregressive ML model can outperform classical time-series models.
 
-<img src="assets/heatmap_raw.jpg" alt="prophet next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
+
+<img src="assets/price_based_lr_models_results.jpg" alt="price_based_lr_models_results.jpg" width='600' float='left'>
+
 
 ### Return-Based Models
 
