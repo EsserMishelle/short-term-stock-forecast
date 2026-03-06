@@ -21,7 +21,7 @@ Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a
 ## Data Description
 This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ) and includes daily stock prices and trading volumes covering the period from January 01, 2021, through February 05, 2026. The historical market data is obtained from Yahoo Finance / yfinance and is recorded at a business-day frequency, resulting in approximately five years of observations used for model training, testing, and forecasting.
 
-# Exploratory Data Analysis (EDA) 
+## Exploratory Data Analysis (EDA) 
 
 <img src="assets/multiple_stocks_closing_price.jpg" alt="Closing Prices" style="width: 2000px; height: 350px;">
 
@@ -42,7 +42,9 @@ To investigate potential calendar effects, average daily returns are aggregated 
 
 The results show limited consistent seasonal structure, suggesting that NVDA price movements are dominated by trend and volatility rather than deterministic seasonal cycles.
 
-# Baseline Forecast Models
+## Forecasting Models
+
+### Baseline Forecast Models
 
 To establish a benchmark for model performance, two simple baseline forecasting approaches were implemented. These models serve as a reference point for evaluating whether forecasting methods improve predictive accuracy.
 
