@@ -108,4 +108,5 @@ The Prophet forecasting model is also evaluated as an alternative time-series ap
 The model is trained only on the training window and evaluated on the test window to ensure realistic forecasting performance.
 
 
+Prophet captures the long-term upward smooth trend in NVDA prices but struggles to fully capture short-term volatility during the test window. Forecast accuracy deteriorates during periods of rapid market movement, suggesting that additive seasonal models may have limited ability to model the complex dynamics of equity price movements.
 
