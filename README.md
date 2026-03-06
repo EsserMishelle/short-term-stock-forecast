@@ -107,6 +107,9 @@ The Prophet forecasting model is also evaluated as an alternative time-series ap
 * Seasonality: yearly enabled, weekly and daily disabled
 The model is trained only on the training window and evaluated on the test window to ensure realistic forecasting performance.
 
+<img src="assets/prophet_next30Day_nvda_forecast.jpg" alt="prophet next30Day nvda forecast.jpg" width='1000'>
+
+<img src="assets/prophet_next30Day_nvda_forecast_zoom.jpg" alt="prophet next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
 
 Prophet captures the long-term upward smooth trend in NVDA prices but struggles to fully capture short-term volatility during the test window. Forecast accuracy deteriorates during periods of rapid market movement, suggesting that additive seasonal models may have limited ability to model the complex dynamics of equity price movements.
 
