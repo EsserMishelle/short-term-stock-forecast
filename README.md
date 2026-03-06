@@ -6,7 +6,7 @@
 The objective of this project is to forecast the short-term closing price of NVIDIA (NVDA) stock and evaluate the predictive performance of multiple modeling approaches across different forecast horizons. The study compares baseline models, classical time-series methods, and machine learning models to assess how forecast accuracy changes from short horizons (1–5 days) to longer horizons (up to 30 days). 
 
 Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a consistent comparison across forecasting methods.
-
+        
 ## Table of Contents 
 - [Data Description](#data-description)
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
@@ -132,6 +132,25 @@ prophet_next30Day_nvda_forecast.jpg
 Prophet captures the long-term upward smooth trend in NVDA prices but struggles to fully capture short-term volatility during the test window. Forecast accuracy deteriorates during periods of rapid market movement, suggesting that additive seasonal models may have limited ability to model the complex dynamics of equity price movements.
 
 ➡️ Full analysis: [`03_prophet_price_model.ipynb`](03_prophet_price_model.ipynb)
+
+### Price-Based Models
+
+The objective of the price-based models is to evaluate whether machine learning methods using lagged price features and cross-asset signals can improve short-term forecasts of NVDA stock prices compared to traditional time-series models.
+
+<img src="assets/heatmap.jpg" alt="Heatmap.jpg" width='1000' float='left'>
+
+
+### Models Evaluated
+Three price-based models are evaluated with increasing feature complexity.
+
+### NVDA-Only Linear Regression
+This model uses only lagged NVDA price features to forecast future prices in order to test whether a simple autoregressive ML model can outperform classical time-series models.
+
+<img src="assets/heatmap_raw.jpg" alt="prophet next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
+
+### Return-Based Models
+
+## Model Comparison
 
 
 
