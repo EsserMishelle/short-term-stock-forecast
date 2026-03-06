@@ -81,4 +81,4 @@ The fitted ARIMA model was used to generate a 30-day forecast of NVDA closing pr
 
 The forecast includes a 95% confidence interval that widens over time, reflecting increasing uncertainty as the forecast horizon grows.
 
-
+➡️ Full analysis: [`01_eda_and_naive_baseline.ipynb`](01_eda_and_naive_baseline.ipynb)
