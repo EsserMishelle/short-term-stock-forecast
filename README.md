@@ -221,11 +221,21 @@ All forecasting approaches are evaluated using out-of-sample RMSE across multipl
 
 #### Linear
 
-<img src="assets/ml_rmse_comarison_results.jpg" alt="ml_rmse_comarison_results" width='700'>
+<img src="assets/ml_rmse_comparison_results.jpg" alt="ml_rmse_comparison_results" width='700'>
+The table above summarizes forecast accuracy across models and horizons using RMSE. Several patterns emerge:
+
+Short horizons (1–5 days): The Naive baseline, Naive-Drift, and Return Linear Regression models perform best, suggesting that very short-term price movements are difficult to predict beyond the current price level.
+
+Intermediate horizons (5–10 days): Model performance remains similar across approaches, indicating limited predictive signal over short forecasting windows.
+
+Longer horizons (20–30 days): Price-based models begin to outperform the naive baselines. In particular, the price-based Lasso regression achieves the lowest RMSE at the 30-day horizon.
+
+Return-based models show less stable performance. the Return Linear Regression model performs similarly to the naive baseline.
 
 <img src="assets/all_models_price_rmse_comparison.jpg" alt="all_models_price_rmse_comparison.jpg">
 
 <img src="assets/all_models_comparison_line_chart.jpg" alt="all_models_comparison_line_chart.jpg" width='700'>
+
 <img src="assets/30day_rmse_all_models_comparison_bar_chart.jpg" alt="30day_rmse_all_models_comparison_bar_chart.jpg" width='700'>
 
 Model performance is evaluated using out-of-sample RMSE across multiple forecast horizons.
