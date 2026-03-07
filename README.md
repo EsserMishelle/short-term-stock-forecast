@@ -197,8 +197,10 @@ With the return-based approach, the simple feature model (that uses only NVDA la
 Random Forest introduces a nonlinear machine learning approach that can capture more complex relationships between lagged return features and future returns.
 <img src="assets/return_based_models_results.jpg" alt="return_based_models_results.jpg" width='600' float='left'>
 
-### Return-Based Summary
+#### Return-Based Summary
 Across horizons (1, 5, 10, 20, 30 days) linear regression consistently performs slightly better than Random Forest. Errors increase as the forecast horizon grows, which is expected. Both return-based models struggle with longer horizons, reinforcing how difficult short-term return prediction is.
+
+➡️ Full analysis: [`05_return_based_linear_and_rf_models.ipynb`](05_return_based_linear_and_rf_models.ipynb)
 
 ## Model Comparison
 
