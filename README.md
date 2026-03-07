@@ -148,8 +148,7 @@ Prophet captures the long-term upward smooth trend in NVDA prices but struggles 
 
 The objective of the price-based models is to evaluate whether machine learning methods using lagged price features and cross-asset signals can improve short-term forecasts of NVDA stock prices compared to traditional time-series models.
 
-##### Pearson Correlation Chart
-
+#### Pearson Correlation Chart
 <img src="assets/heatmap.jpg" alt="Heatmap.jpg" width='1000' float='left'>
 
 The correlation matrix shows strong positive relationships between NVDA and other semiconductor-sector assets. NVDA prices are highly correlated with QQQ and TSM (0.94–0.97) and moderately correlated with AMD (0.77), reflecting shared market technology sector. Volatility indicators such as VIX exhibit a weak negative relationship with NVDA, consistent with the typical inverse relationship between market volatility and equity prices.
@@ -181,6 +180,7 @@ Although many engineered features were included, Lasso retains only a few key pr
 
 #### Price Based Linear Models Summary
 The 30-day Lasso forecast captures the overall upward trend in NVDA’s price but smooths short-term fluctuations. The model follows the general trend direction of the series but reacts slowly to rapid price increases and declines. This behavior is consistent with the observed 30-day test RMSE (16.05), indicating moderate uncertainty over longer forecasting horizons.
+
 ➡️ Full analysis: [`04_price_based_linear_models.ipynb`](04_price_based_linear_models.ipynb)
 
 -----------------------------
