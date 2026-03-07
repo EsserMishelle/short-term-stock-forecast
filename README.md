@@ -1,4 +1,4 @@
-<img src="assets/header_image.jpg" alt="header_image" width='100'>
+<img src="assets/header_image.jpg" alt="header_image" width='1000' height='400'>
 
 # Predicting NVDA Stock Prices: A Comparison of Baseline, Time-Series, and Machine Learning Models 
 ## Overview and Analysis Objective
