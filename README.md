@@ -172,7 +172,14 @@ Although many engineered features were included, Lasso retains only a few key pr
 The 30-day Lasso forecast captures the overall upward trend in NVDA’s price but smooths short-term fluctuations. The model follows the general trend direction of the series but reacts slowly to rapid price increases and declines. This behavior is consistent with the observed 30-day test RMSE (16.05), indicating moderate uncertainty over longer forecasting horizons.
 
 ### Return-Based Models
+The objective of the return-based models is to evaluate whether forecasting daily returns instead of price levels improves predictive performance. By modeling daily returns, the analysis focuses on short-term changes in price rather than overall price growth. Return-based model predicts future returns and converts them back to price for comparison. Because returns are typically more stationary than prices, these models test whether return-based features capture short-term market dynamics more effectively.
 
+### Models Evaluated 
+Two return-based models are evaluated to compare simple linear relationships with more flexible machine learning approaches.
+
+### Return-Based Linear Regression
+
+This model predicts future NVDA returns using lagged return features derived from NVDA and related semiconductor-sector assets.
 ## Model Comparison
 
 
