@@ -151,9 +151,13 @@ Three price-based models are evaluated with increasing feature complexity.
 ### NVDA-Only Linear Regression
 This model uses only lagged NVDA price features to forecast future prices in order to test whether a simple autoregressive ML model can outperform classical time-series models.
 
-<img src="assets/price_based_lasso_lr_models_results.jpg" alt="price_based_lasso_lr_models_results.jpg" width='600' float='left'>
-
+### NVDA + Cross-asset model 
+This model incorporates broader semiconductor-sector dynamics, additional lagged features from AMD, TSM, and QQQ.
 <img src="assets/price_based_lr_models_results.jpg" alt="price_based_lr_models_results.jpg" width='600' float='left'>
+
+### Lasso NVDA + Cross-Asset Linear Regression Model
+Lasso regression introduces regularization to control model complexity and perform feature selection among the expanded feature set.
+<img src="assets/price_based_lasso_lr_models_results.jpg" alt="price_based_lasso_lr_models_results.jpg" width='600' float='left'>
 
 <img src="assets/lasso_coefficients.jpg" alt="lasso_coefficients.jpg" width='600' float='left'>
 
