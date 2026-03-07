@@ -149,7 +149,8 @@ Prophet captures the long-term upward smooth trend in NVDA prices but struggles 
 The objective of the price-based models is to evaluate whether machine learning methods using lagged price features and cross-asset signals can improve short-term forecasts of NVDA stock prices compared to traditional time-series models.
 
 #### Pearson Correlation Chart
-<img src="assets/heatmap.jpg" alt="Heatmap.jpg" width='1000' float='left'>
+<!-- <img src="assets/heatmap.jpg" alt="Heatmap.jpg" width='1000' height='1000' float='left' > -->
+<img src="assets/heatmap.jpg" alt="Heatmap.jpg">
 
 The correlation matrix shows strong positive relationships between NVDA and other semiconductor-sector assets. NVDA prices are highly correlated with QQQ and TSM (0.94–0.97) and moderately correlated with AMD (0.77), reflecting shared market technology sector. Volatility indicators such as VIX exhibit a weak negative relationship with NVDA, consistent with the typical inverse relationship between market volatility and equity prices.
 
@@ -176,7 +177,7 @@ Lasso underperforms the cross-asset model at short horizons but becomes more com
 Although many engineered features were included, Lasso retains only a few key predictors—primarily NVDA’s lagged price, trend, and a limited set of market signals. The large number of zeroed coefficients suggests that many engineered features capture overlapping information, and removing them helped stabilize out-of-sample performance.
 
 #### Linear Regression Lasso Direct 30 Day Chart
-<img src="assets/lr_lasso_30day_forecast.jpg" alt="lr_lasso_30day_forecast.jpg" width='600' float='left'>
+<img src="assets/lr_lasso_30day_forecast.jpg" alt="lr_lasso_30day_forecast.jpg" width='800' float='left'>
 
 #### Price Based Linear Models Summary
 The 30-day Lasso forecast captures the overall upward trend in NVDA’s price but smooths short-term fluctuations. The model follows the general trend direction of the series but reacts slowly to rapid price increases and declines. This behavior is consistent with the observed 30-day test RMSE (16.05), indicating moderate uncertainty over longer forecasting horizons.
@@ -195,7 +196,8 @@ With the return-based approach, the simple feature model (that uses only NVDA la
 
 ### Return-Based Random Forest Model
 Random Forest introduces a nonlinear machine learning approach that can capture more complex relationships between lagged return features and future returns.
-<img src="assets/return_based_models_results.jpg" alt="return_based_models_results.jpg" width='600' float='left'>
+
+<img src="assets/return_based_models_results.jpg" alt="return_based_models_results.jpg" width='700'>
 
 #### Return-Based Summary
 Across horizons (1, 5, 10, 20, 30 days) linear regression consistently performs slightly better than Random Forest. Errors increase as the forecast horizon grows, which is expected. Both return-based models struggle with longer horizons, reinforcing how difficult short-term return prediction is.
