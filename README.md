@@ -132,9 +132,10 @@ The Prophet model captures the general trend of the series but produces larger f
 #### Train, Test and Future 30 Days Forecast Charts
 
 The below charts show Prophet trains on historical NVDA prices, evaluates on a 90-day test window, and generates a 30-business-day forward forecast with 95% confidence intervals.
-
+Prophet Next 30 Day NVDA Forecast
 <img src="assets/prophet_next30Day_nvda_forecast.jpg" alt="prophet next30Day nvda forecast.jpg" width='800' float='left'>
-prophet_next30Day_nvda_forecast.jpg
+
+Prophet Next 30 Day NVDA Forecast Zoom
 <img src="assets/prophet_next30Day_nvda_forecast_zoom.jpg" alt="prophet next 30 Day nvda forecast zoom.jpg" width='600' float='left'>
 
 #### Prophet Model Summary
