@@ -178,11 +178,11 @@ The objective of the return-based models is to evaluate whether forecasting dail
 Two return-based models are evaluated to compare simple linear relationships with more flexible machine learning approaches.
 
 ### Return-Based Linear Regression
-With the return-based approach, the simple feature model (that uses only NVDA lag features) is evaluated against the expanded feature model (that uses NVDA and cross-asset features). The additional volatility and cross-asset return features do not yield meaningful improvement in predictive performance. Consequently, the return-based simple model is retained for comparison with other forecasting approaches.
+With the return-based approach, the simple feature model (that uses only NVDA lag features) is evaluated against the expanded feature model (that uses NVDA and cross-asset features). The additional volatility and cross-asset return features do not yield meaningful improvement in predictive performance. Consequently, the return-based simple model is retained for comparison with other forecasting models.
 
 ### Return-Based Random Forest Model
 Random Forest introduces a nonlinear machine learning approach that can capture more complex relationships between lagged return features and future returns.
-
+<img src="assets/return_based_model_results.jpg" alt="return_based_model_results.jpg" width='600' float='left'>
 
 
 ## Model Comparison
