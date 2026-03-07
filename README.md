@@ -168,6 +168,8 @@ This model incorporates broader semiconductor-sector dynamics, additional lagged
 
 ### Lasso NVDA + Cross-Asset Linear Regression Model
 Lasso regression introduces regularization to control model complexity and perform feature selection among the expanded feature set.
+
+
 <img src="assets/price_based_lasso_lr_models_results.jpg" alt="price_based_lasso_lr_models_results.jpg" width='600' float='left'>
 
 Lasso underperforms the cross-asset model at short horizons but becomes more competitive at longer horizons. The regularization effect improves generalization by limiting redundant predictors, resulting in more stable long-horizon forecasts.
