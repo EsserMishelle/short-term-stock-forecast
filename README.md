@@ -167,6 +167,8 @@ Although many engineered features were included, Lasso retains only a few key pr
 
 #### Linear Regression Lasso Direct 30 Day Chart
 <img src="assets/lr_lasso_30day_forecast.jpg" alt="lr_lasso_30day_forecast.jpg" width='600' float='left'>
+
+#### Price Based Linear Models Summary
 The 30-day Lasso forecast captures the overall upward trend in NVDA’s price but smooths short-term fluctuations. The model follows the general trend direction of the series but reacts slowly to rapid price increases and declines. This behavior is consistent with the observed 30-day test RMSE (16.05), indicating moderate uncertainty over longer forecasting horizons.
 
 ### Return-Based Models
