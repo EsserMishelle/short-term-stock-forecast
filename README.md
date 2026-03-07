@@ -159,9 +159,15 @@ This model incorporates broader semiconductor-sector dynamics, additional lagged
 Lasso regression introduces regularization to control model complexity and perform feature selection among the expanded feature set.
 <img src="assets/price_based_lasso_lr_models_results.jpg" alt="price_based_lasso_lr_models_results.jpg" width='600' float='left'>
 
-<img src="assets/lasso_coefficients.jpg" alt="lasso_coefficients.jpg" width='600' float='left'>
+Lasso underperforms the cross-asset model at short horizons but becomes more competitive at longer horizons. The regularization effect improves generalization by limiting redundant predictors, resulting in more stable long-horizon forecasts.
 
+#### Coefficient Chart
+<img src="assets/lasso_coefficients.jpg" alt="lasso_coefficients.jpg" width='600' float='left'>
+Although many engineered features were included, Lasso retains only a few key predictors—primarily NVDA’s lagged price, trend, and a limited set of market signals. The large number of zeroed coefficients suggests that many engineered features capture overlapping information, and removing them helped stabilize out-of-sample performance.
+
+#### Linear Regression Lasso Direct 30 Day Chart
 <img src="assets/lr_lasso_30day_forecast.jpg" alt="lr_lasso_30day_forecast.jpg" width='600' float='left'>
+The 30-day Lasso forecast captures the overall upward trend in NVDA’s price but smooths short-term fluctuations, reflecting the model’s reliance on dominant autoregressive structure and drift. While the model tracks direction reasonably well, the lag in peak and pullback periods is consistent with the observed 30-day test RMSE (16.05), indicating moderate long-horizon forecasting uncertainty.
 
 ### Return-Based Models
 
