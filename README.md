@@ -219,7 +219,7 @@ All forecasting approaches are evaluated using out-of-sample RMSE across multipl
 - Price-Based Linear Regression Models (NVDA-only, Cross-Asset, and Lasso)  
 - Return-Based Models (Linear Regression and Random Forest)
 
-#### Linear
+#### Linear Regression RMSE Comparison
 
 <img src="assets/ml_rmse_comparison_results.jpg" alt="ml_rmse_comparison_results" width='700'>
 The table above summarizes forecast accuracy across models and horizons using RMSE. Several patterns emerge:
