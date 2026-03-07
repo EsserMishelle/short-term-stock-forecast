@@ -22,6 +22,13 @@ Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a
 ## Data Description
 This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ) and includes daily stock prices and trading volumes covering the period from January 01, 2021, through February 05, 2026. The historical market data is obtained from Yahoo Finance / yfinance and is recorded at a business-day frequency, resulting in approximately five years of observations used for model training, testing, and forecasting.
 
+Dataset Summary
+- Source: Yahoo Finance (yfinance)
+- Time range: Jan 2021 – Feb 2026
+- Frequency: Business days
+- Target variable: NVDA closing price
+- Additional assets: AMD, TSM, QQQ
+
 ## Exploratory Data Analysis (EDA) 
 
 ### Price and Volumne Charts
@@ -46,6 +53,7 @@ To investigate potential calendar effects, average daily returns are aggregated 
 
 The results show limited consistent seasonal structure, suggesting that NVDA price movements are dominated by trend and volatility rather than deterministic seasonal cycles.
 
+------------------
 ## Forecasting Models
 
 ### Baseline Forecast Models
@@ -68,6 +76,7 @@ Comparing the two baseline approaches shows that the drift model leads to modest
 
 ➡️ Full analysis: [`01_eda_and_naive_baseline.ipynb`](01_eda_and_naive_baseline.ipynb)
 
+-----------------------------
 ### ARIMA Model
 
 The ARIMA (AutoRegressive Integrated Moving Average) model is implemented as a classical time-series forecasting approach for predicting the short-term closing price of NVIDIA (NVDA). Model parameters are evaluated using information criteria and forecast accuracy metrics to determine an appropriate ARIMA specification.
@@ -102,6 +111,7 @@ The ARIMA model captures the overall direction of the time series but struggles 
 
 ➡️ Full analysis: [`02_arima_price_model.ipynb`](02_arima_price_model.ipynb)
 
+-------------------------
 ### Prophet Model
 
 The Prophet forecasting model is also evaluated as an alternative time-series approach. Prophet is designed to capture trend, seasonality, and holiday effects in time-series data using an additive model framework. Unlike ARIMA, Prophet does not require explicit stationarity transformations and is designed to handle irregular patterns in the data.
@@ -133,6 +143,7 @@ Prophet captures the long-term upward smooth trend in NVDA prices but struggles 
 
 ➡️ Full analysis: [`03_prophet_price_model.ipynb`](03_prophet_price_model.ipynb)
 
+---------------------
 ### Price-Based Models
 
 The objective of the price-based models is to evaluate whether machine learning methods using lagged price features and cross-asset signals can improve short-term forecasts of NVDA stock prices compared to traditional time-series models.
@@ -170,7 +181,9 @@ Although many engineered features were included, Lasso retains only a few key pr
 
 #### Price Based Linear Models Summary
 The 30-day Lasso forecast captures the overall upward trend in NVDA’s price but smooths short-term fluctuations. The model follows the general trend direction of the series but reacts slowly to rapid price increases and declines. This behavior is consistent with the observed 30-day test RMSE (16.05), indicating moderate uncertainty over longer forecasting horizons.
+➡️ Full analysis: [`04_price_based_linear_models.ipynb`](04_price_based_linear_models.ipynb)
 
+-----------------------------
 ### Return-Based Models
 The objective of the return-based models is to evaluate whether forecasting daily returns instead of price levels improves predictive performance. By modeling daily returns, the analysis focuses on short-term changes in price rather than overall price growth. Return-based model predicts future returns and converts them back to price for comparison. Because returns are typically more stationary than prices, these models test whether return-based features capture short-term market dynamics more effectively.
 
@@ -182,8 +195,10 @@ With the return-based approach, the simple feature model (that uses only NVDA la
 
 ### Return-Based Random Forest Model
 Random Forest introduces a nonlinear machine learning approach that can capture more complex relationships between lagged return features and future returns.
-<img src="assets/return_based_model_results.jpg" alt="return_based_model_results.jpg" width='600' float='left'>
+<img src="assets/return_based_models_results.jpg" alt="return_based_models_results.jpg" width='600' float='left'>
 
+### Return-Based Summary
+Across horizons (1, 5, 10, 20, 30 days) linear regression consistently performs slightly better than Random Forest. Errors increase as the forecast horizon grows, which is expected. Both return-based models struggle with longer horizons, reinforcing how difficult short-term return prediction is.
 
 ## Model Comparison
 
