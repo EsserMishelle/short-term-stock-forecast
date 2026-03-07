@@ -232,7 +232,7 @@ Longer horizons (20–30 days): Price-based models begin to outperform the naive
 
 Return-based models show less stable performance. the Return Linear Regression model performs similarly to the naive baseline.
 
-<img src="assets/all_models_comparison_line_chart.jpg" alt="all_models_comparison_line_chart.jpg" width='700'>
+<img src="assets/all_models_comparison_line_chart.jpg" alt="all_models_comparison_line_chart.jpg" width='1000'>
 
 Forecast error increases for all models as the prediction horizon grows. Price-based models show more stable performance at longer horizons, with the Lasso regression achieving the lowest RMSE at 30 days, while the return-based Random Forest model exhibits the largest error growth.
 
