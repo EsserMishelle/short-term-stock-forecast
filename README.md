@@ -208,7 +208,26 @@ Across horizons (1, 5, 10, 20, 30 days) linear regression consistently performs 
 
 ➡️ Full analysis: [`05_return_based_linear_and_rf_models.ipynb`](05_return_based_linear_and_rf_models.ipynb)
 
-## Model Comparison
+--------------------------------------------
+## Final Model Comparison
 
+All forecasting approaches are evaluated using out-of-sample RMSE across multiple forecast horizons. The models compared include:
 
+- Naive Baseline and Drift Naive Models  
+- ARIMA Model  
+- Prophet Model  
+- Price-Based Linear Regression Models (NVDA-only, Cross-Asset, and Lasso)  
+- Return-Based Models (Linear Regression and Random Forest)
 
+#### Linear
+
+<img src="assets/ml_rmse_comarison_results.jpg" alt="ml_rmse_comarison_results" width='700'>
+
+<img src="assets/all_models_price_rmse_comparison.jpg" alt="all_models_price_rmse_comparison.jpg">
+
+<img src="assets/all_models_comparison_line_chart.jpg" alt="all_models_comparison_line_chart.jpg" width='700'>
+<img src="assets/30day_rmse_all_models_comparison_bar_chart.jpg" alt="30day_rmse_all_models_comparison_bar_chart.jpg" width='700'>
+
+Model performance is evaluated using out-of-sample RMSE across multiple forecast horizons.
+
+➡️ Full analysis: [`06_final_model_comparison.ipynb`](06_final_model_comparison.ipynb)
