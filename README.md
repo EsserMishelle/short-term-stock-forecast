@@ -17,7 +17,7 @@ Model performance is evaluated using Root Mean Squared Error (RMSE) to provide a
   - [Prophet Model](#prophet-model)
   - [Price-Based Models](#price-based-models)
   - [Return-Based Models](#return-based-models)
-- [Model Comparison](#model-comparison)
+- [Final Model Comparison](#final-model-comparison)
 
 ## Data Description
 This project uses historical market data for NVIDIA (NVDA) along with selected market indicators to construct forecasting models. The dataset compares NVIDIA (NVDA) with other semiconductor companies (AMD, TSM) and the broader technology index (QQQ) and includes daily stock prices and trading volumes covering the period from January 01, 2021, through February 05, 2026. The historical market data is obtained from Yahoo Finance / yfinance and is recorded at a business-day frequency, resulting in approximately five years of observations used for model training, testing, and forecasting.
@@ -232,12 +232,20 @@ Longer horizons (20–30 days): Price-based models begin to outperform the naive
 
 Return-based models show less stable performance. the Return Linear Regression model performs similarly to the naive baseline.
 
-<img src="assets/all_models_price_rmse_comparison.jpg" alt="all_models_price_rmse_comparison.jpg">
-
 <img src="assets/all_models_comparison_line_chart.jpg" alt="all_models_comparison_line_chart.jpg" width='700'>
 
-<img src="assets/30day_rmse_all_models_comparison_bar_chart.jpg" alt="30day_rmse_all_models_comparison_bar_chart.jpg" width='700'>
+Forecast error increases for all models as the prediction horizon grows. Price-based models show more stable performance at longer horizons, with the Lasso regression achieving the lowest RMSE at 30 days, while the return-based Random Forest model exhibits the largest error growth.
 
-Model performance is evaluated using out-of-sample RMSE across multiple forecast horizons.
+<img src="assets/all_models_price_rmse_comparison.jpg" alt="all_models_price_rmse_comparison.jpg">
+
+<img src="assets/30day_rmse_all_models_comparison_bar_chart.jpg" alt="30day_rmse_all_models_comparison_bar_chart.jpg" width='700'>
+Price-based machine learning models outperform the baseline and return-based approaches at the 30-day horizon. The Lasso regression model achieves the lowest RMSE, followed by the NVDA-only linear regression model. Baseline models remain competitive but are slightly less accurate, while the return-based Random Forest model shows the highest forecast error. Traditional time-series models (ARIMA and Prophet) perform substantially worse at this longer forecast horizon.
+
+## Final Executive Summary
+This study evaluates multiple forecasting approaches to predict short-term NVIDIA (NVDA) stock prices, including Naive baseline and Naive with drift models, classical time-series methods (ARIMA and Prophet), price-based machine learning models, and return-based models. Model performance is assessed across multiple forecast horizons using test RMSE.
+
+Results show that simple models perform competitively at short horizons, reflecting the difficulty of predicting near-term market movements. At longer horizons, price-based machine learning models provide modest improvements, with the Lasso regression model achieving the lowest RMSE at the 30-day forecast horizon.
+
+Return-based models do not consistently outperform price-based approaches, and more complex models such as Random Forest do not necessarily improve predictive accuracy. Overall, the findings highlight a common characteristic of financial markets: short-term stock price movements remain challenging to forecast, and carefully engineered price-based features can offer limited but meaningful improvements over baseline methods.
 
 ➡️ Full analysis: [`06_final_model_comparison.ipynb`](06_final_model_comparison.ipynb)
